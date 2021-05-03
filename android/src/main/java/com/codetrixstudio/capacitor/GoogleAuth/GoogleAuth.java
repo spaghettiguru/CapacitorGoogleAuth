@@ -101,7 +101,7 @@ public class GoogleAuth extends Plugin {
       signInCall.success(user);
 
     } catch (ApiException e) {
-      signInCall.error("Something went wrong", e);
+      signInCall.error("Something went wrong. com.google.android.gms.common.api.ApiException status code: " + e.getStatusCode(), e);
     }
   }
 
